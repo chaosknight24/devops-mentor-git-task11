@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - 'main'
+      - 'hotfix-*'  ### Любая ветка с именем начинающиеся на hotfix-
 
 jobs:
   docker:
