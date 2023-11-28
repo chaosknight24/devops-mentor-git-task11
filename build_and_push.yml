@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - 'main'
+      - 'feature-*'  ### Любая ветка с именем начинающиеся на feature-
 
 jobs:
   docker:
@@ -29,6 +30,4 @@ jobs:
           tags: user/app:latest
       -
         name: Deploy on test
-        run: docker run -d --name user-app user/app:latest   ### Шаг, который запускает bash команду для запуска докер контейнера
-
-
+        run: docker run -d --name user-app user/app:latest
